@@ -16,6 +16,18 @@ public class Main {
             System.out.println("Ingrese el código del problema (0 para salir): ");
             codigoProblema = scanner.nextLine();
             
+            if (problemasSoluciones.containsKey(codigoProblema)) {
+                System.out.println("Solución: " + problemasSoluciones.get(codigoProblema));
+                System.out.println("¿Se resolvió el problema? (s/n): ");
+                String respuesta = scanner.nextLine();
+                if (respuesta.equalsIgnoreCase("s")) {
+                    System.out.println("Problema resuelto. ¡Buen trabajo!");
+                } else {
+                    System.out.println("Intente resolver el problema nuevamente o busque ayuda.");
+                }
+            } else if (!codigoProblema.equals("0")) {
+                System.out.println("Código de problema no válido. Por favor, intente nuevamente.");
+            }
         } while (!codigoProblema.equals("0"));
         
         System.out.println("¡Gracias por utilizar nuestro sistema de solución de problemas de maquinaria!");
