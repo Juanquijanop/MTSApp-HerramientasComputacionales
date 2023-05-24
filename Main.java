@@ -6,7 +6,20 @@ public class Main {
     public static void main(String[] args) {
         Map<String, String> problemasSoluciones = new HashMap<>(); // Mapa para almacenar los problemas y soluciones
         
-        problemasSoluciones.put("0000", "Ejemplo"); // Podemos agregar aqui los datos de la BD
+        problemasSoluciones.put("E1", "Error: Sobrecalentamiento del motor\n" +
+                "Solución: Paso 1 - Apague la máquina inmediatamente\n" +
+                "Solución: Paso 2 - Verifique el nivel de refrigerante y agregue si es necesario\n" +
+                "Solución: Paso 3 - Limpie los radiadores y asegúrese de que no estén obstruidos");
+
+        problemasSoluciones.put("E2", "Error: Fugas de aire en el sistema hidráulico\n" +
+                "Solución: Paso 1 - Inspeccione las conexiones y juntas hidráulicas en busca de fugas\n" +
+                "Solución: Paso 2 - Reemplace los sellos y empaques dañados\n" +
+                "Solución: Paso 3 - Verifique la presión del sistema hidráulico y ajústela si es necesario");
+
+        problemasSoluciones.put("E3", "Error: Vibraciones excesivas en la máquina\n" +
+                "Solución: Paso 1 - Verifique que todas las partes móviles estén correctamente ajustadas\n" +
+                "Solución: Paso 2 - Equilibre o reemplace los componentes desgastados\n" +
+                "Solución: Paso 3 - Ajuste los soportes y bases de la máquina para reducir las vibraciones");
 
         Scanner scanner = new Scanner(System.in);
         String codigoProblema;
