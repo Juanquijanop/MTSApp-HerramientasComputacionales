@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -5,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Map<String, String> problemasSoluciones = new HashMap<>(); // Mapa para almacenar los problemas y soluciones
-        
+
         problemasSoluciones.put("E1", "Error: Sobrecalentamiento del motor\n" +
                 "Solución: Paso 1 - Apague la máquina inmediatamente\n" +
                 "Solución: Paso 2 - Verifique el nivel de refrigerante y agregue si es necesario\n" +
@@ -23,12 +25,17 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         String codigoProblema;
-        
+
+        System.out.println("Lista de códigos de problema:");
+        for (String codigo : problemasSoluciones.keySet()) {
+            System.out.println("- " + codigo);
+        }
+
         // Bucle que se ejecuta hasta que el usuario ingresa "0" para salir
         do {
-            System.out.println("Ingrese el código del problema (0 para salir): ");
+            System.out.println("\nIngrese el código del problema (0 para salir): ");
             codigoProblema = scanner.nextLine();
-            
+
             if (problemasSoluciones.containsKey(codigoProblema)) {
                 System.out.println("Solución: " + problemasSoluciones.get(codigoProblema));
                 System.out.println("¿Se resolvió el problema? (s/n): ");
@@ -42,8 +49,7 @@ public class Main {
                 System.out.println("Código de problema no válido. Por favor, intente nuevamente.");
             }
         } while (!codigoProblema.equals("0"));
-        
-        System.out.println("¡Gracias por utilizar nuestro sistema de solución de problemas de maquinaria!");
-        
+
+        System.out.println("\n¡Gracias por utilizar nuestro sistema de solución de problemas de maquinaria!");
     }
 }
